@@ -1,0 +1,128 @@
+.container {
+	/* background-color: #000000;
+	background-image: linear-gradient(315deg, #000000 0%, #414141 74%); */
+	width: fit-content;
+	display: flex;
+	justify-content: flex-start;
+}
+html {
+	background-color: #000000;
+	background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
+}
+
+:root{
+
+	--transition-time : 500ms;
+}
+
+.main-container{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.myId {
+	width: 15rem;
+	/* margin-right: 5rem; */
+	border-radius: 5px;
+	background: #c9d6ff; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #e2e2e2, #c9d6ff); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(
+		to right,
+		#e2e2e2,
+		#c9d6ff
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+	padding: 2rem;
+	display: grid;
+	justify-content: center;
+	align-content: center;
+}
+
+
+
+.call-button {
+	text-align: center;
+	margin-top: 2rem;
+}
+
+.video-container {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	margin-top: 10rem;
+}
+
+.caller {
+	text-align: center;
+	color: #000;
+}
+
+
+.video{
+	margin-left: 2.5rem;
+	margin-right: 50px;
+}
+
+.video:last-child{
+	margin-left: 0rem;
+	margin-right: 100px;
+}
+.video-styles{
+	padding: 10px;
+	max-width: 395px;
+	width: 350px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	outline: 2px solid #6161f3;
+	transition : outline var(--transition-time) !important; 
+}
+
+
+
+.video-styles:last-child{
+	margin-right: 0px;
+}
+
+.video-styles:hover{
+	outline : 0px !important;
+}
+
+.main-container-opaque{
+	opacity: 0.1;
+}
+.answer-call{
+	background-color: #fff;
+	padding: 1rem;
+	border-radius: 1rem;
+	width: calc(100%/3);
+	position: absolute;
+	
+	transform: translateX(100%) translateY(50%);
+	
+	z-index: 10;
+}
+@media only screen and (max-width:600px) {
+	.video-container{
+		flex-direction: column;
+		align-items: center;
+		margin-top: 2.5rem;
+	}
+	.video{
+
+		margin: 0px;
+		margin-top: 10px;
+	}
+	.video:last-child{
+		margin: 0px;
+		margin-top: 15px;
+	}
+
+	.container{
+		/* margin: 0px; */
+		flex-direction: column-reverse;
+		align-items: center;
+		justify-content: center;
+	}
+
+}
